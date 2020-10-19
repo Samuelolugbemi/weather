@@ -11,7 +11,7 @@ function getWeather() {
                     <h3 class="display-4 pb-5">${convertToCelsius(text.main.temp)}&deg;c</h3>
                 </div>
                 <div class="col-md-6">
-                   <i class="fa ${getIcon(convertToCelsius(text.main.temp))} fa-4x pb-5"></i>
+                   <i class="fa ${getWeatherIcon(convertToCelsius(text.main.temp))} fa-4x pb-5"></i>
                 </div>
             </div>
             <div class="row">
@@ -44,7 +44,7 @@ getWeather();
 function convertToCelsius(temp){
     return (temp - 273.15).toFixed(2); 
 }
-function getIcon(temp){
+function getWeatherIcon(temp){
 if(temp > 39){
     return "fa-sun";
 }else if(temp =>10 &&temp <= 39 ){
